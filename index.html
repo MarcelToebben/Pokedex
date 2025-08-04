@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+
+        <input type="text" placeholder="Pokémon suchen..." id="searchInput" oninput="searchPokemon()">
+    <div id="renderHere"></div>
+
+</header>
+
+<body>
+    <div id="overlay" class="overlay hidden" onclick="closeOverlay(event)">
+        <div class="overlay-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeOverlay()">X</span>
+            <button onclick="prevPokemon()">←</button>
+            <div id="overlayData"></div>
+            <button onclick="nextPokemon()">→</button>
+        </div>
+    </div>
+</body>
+
+</html>
