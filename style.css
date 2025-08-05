@@ -1,8 +1,20 @@
 body {
-  font-family: sans-serif;
+  font-family: "Playwrite AU QLD", cursive;
   margin: 0;
   padding: 20px;
   background-color: #504b97;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#searchInput {
+  height: 32px;
+  cursor: pointer;
 }
 
 #renderHere {
@@ -15,18 +27,19 @@ body {
 #renderHere > div {
   cursor: pointer;
   padding: 10px;
-  background: rgb(194, 186, 235);
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   width: 150px;
   text-align: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: white;
 }
 
 #renderHere > div:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
+
 
 .overlay {
   position: fixed;
@@ -59,4 +72,39 @@ body {
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
+}
+
+#loadMoreBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #c2baeb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333;
+}
+
+#loadMoreBtn:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.overlay-content {
+  background: rgba(255, 255, 255, 0.95); /* leicht transparent */
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 350px;
+  position: relative;
+  color: #333;
+}
+
+.overlay-content img {
+  width: 150px;
+  height: auto;
+}
+
+.overlay-content p {
+  margin: 6px 0;
+  font-weight: 500;
 }
