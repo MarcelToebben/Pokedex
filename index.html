@@ -26,15 +26,18 @@
     <div id="overlay" class="overlay hidden" onclick="closeOverlay(event)">
         <div class="overlay-content" onclick="event.stopPropagation()">
             <span class="close" onclick="closeOverlay()">X</span>
-            <button onclick="prevPokemon()">←</button>
             <div id="overlayData"></div>
-            <button onclick="nextPokemon()">→</button>
         </div>
     </div>
     <div id="loadMoreContainer" style="text-align:center; margin-top: 30px;">
     <button id="loadMoreBtn" onclick="loadMorePokemon()">Weitere Pokémon laden</button>
     <p id="loadingText" style="display:none;">Lade Pokémon...</p>
 </div>
+
+<footer>
+    <p>2025 created by Marcel Többen</p>
+    <a href="Impressum">Impressum</a>
+</footer>
 
 </body>
 
